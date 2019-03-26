@@ -23,27 +23,23 @@
     <div class="wallet-con">
         <div class="w-item">
             <ul class="w-content clearfix">
-                <li class="headimg" id='user_img'>
-                    <a href="javascript:;">头像</a>
+                <li class="headimg">
+                    <a href="">头像</a>
                     <s class="fr"></s>
-                    @if(!empty($user_data->user_img))
-                        <span class="img fr"></span>
-                    @else
-                        <span class="fr"><img src="/user_img/{{$user_data->user_img}}" alt=""></span>        
-                    @endif
+                    <span class="img fr"></span>
                 </li>
-                <li id='user_name'>
-                    <a href="javascript:;">昵称</a>
+                <li>
+                    <a href="">昵称</a>
                     <s class="fr"></s>
-                    <span class="fr">{{$user_data->user_name}}</span>
+                    <span class="fr">二大爷</span>
                 </li>
-                <li id='index'>
-                    <a href="javascript:;">我的主页</a>
+                <li>
+                    <a href="">我的主页</a>
                     <s class="fr"></s>
                 </li>
                 <li>
                     <a href="">手机号码</a>
-                    <span class="fr">{{$user_data->user_tel}}</span>
+                    <span class="fr">400-666-2110</span>
                 </li>           
             </ul>     
         </div>
@@ -64,19 +60,3 @@
 <script src="js/jquery-1.11.2.min.js"></script>
 </body>
 </html>
-<script src='/jquery-3.2.1.min.js'></script>
-<script>
-    $(function(){
-        $(document).on('click','#user_img',function(){
-            alert(1)
-        })
-
-        $(document).on('click','#user_name',function(){
-            alert(2)
-        })
-        
-        $(document).on('click','#index',function(){
-            location.href="{{url('userpage')}}";
-        })
-    })
-</script>
